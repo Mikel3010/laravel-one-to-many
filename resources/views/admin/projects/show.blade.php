@@ -8,6 +8,9 @@
     <p>
         {{$project->description}}
     </p>
+    @if ($project->type_id)
+    <h3>Tipo: {{$project->type?->name}}</h3>
+    @endif
     <div>
         <img src="{{ asset('storage/' .$project->image)}}" alt="{{$project->title}}">
     </div>
